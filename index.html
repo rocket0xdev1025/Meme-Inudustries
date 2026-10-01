@@ -44,9 +44,14 @@
         linear-gradient(180deg, rgba(6, 17, 12, 0.55) 0%, rgba(6, 17, 12, 0.78) 42%, rgba(4, 10, 8, 0.88) 100%),
         url("banner.jpg");
       background-size: cover;
-      background-position: center top;
-      background-attachment: fixed;
+      background-position: center center;
+      background-attachment: scroll;
       background-repeat: no-repeat;
+    }
+    @media (min-width: 768px) {
+      body {
+        background-attachment: fixed;
+      }
     }
     ::selection {
       background: #2ef5b2;
@@ -123,34 +128,36 @@
     <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
       <a href="#top" class="flex items-center gap-3">
         <img src="logo.png" alt="Meme Inudustries logo" class="h-11 w-11 rounded-full shadow-glow ring-2 ring-mint/70" />
-        <span class="font-display text-xl leading-none text-white sm:text-2xl">Meme <span class="text-mint">Inudustries</span></span>
+        <span class="font-display whitespace-nowrap text-base leading-none text-white sm:text-2xl">Meme <span class="text-mint">Inudustries</span></span>
       </a>
       <nav class="hidden items-center gap-6 text-sm font-semibold text-white/80 md:flex">
         <a href="#story" class="transition hover:text-mint">Story</a>
         <a href="#how" class="transition hover:text-mint">How to Buy</a>
         <a href="#chart" class="transition hover:text-mint">Chart</a>
       </nav>
-      <div class="flex items-center gap-2 sm:gap-3">
+      <div class="flex shrink-0 items-center gap-2 sm:gap-3">
         <a href="https://t.me/MemeInudustries" target="_blank" rel="noopener noreferrer" aria-label="Telegram" class="rounded-full ring-2 ring-white/10 transition hover:ring-mint">
-          <img src="tg.png" alt="" class="h-9 w-9 rounded-full" />
+          <img src="tg.png" alt="" class="h-8 w-8 rounded-full sm:h-9 sm:w-9" />
         </a>
-        <a href="https://x.com/MemeInudustries" target="_blank" rel="noopener noreferrer" aria-label="X" class="grid h-9 w-9 place-items-center overflow-hidden rounded-full bg-black ring-2 ring-white/15 transition hover:ring-mint">
-          <img src="x.png" alt="" class="h-9 w-9 object-cover" />
+        <a href="https://x.com/MemeInudustries" target="_blank" rel="noopener noreferrer" aria-label="X" class="grid h-8 w-8 place-items-center overflow-hidden rounded-full bg-black ring-2 ring-white/15 transition hover:ring-mint sm:h-9 sm:w-9">
+          <img src="x.png" alt="" class="h-8 w-8 object-cover sm:h-9 sm:w-9" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-shine rounded-full bg-mint px-4 py-2 text-sm font-extrabold text-ink shadow-glow transition hover:bg-white">Buy Now</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="btn-shine whitespace-nowrap rounded-full bg-mint px-3 py-2 text-xs font-extrabold text-ink shadow-glow transition hover:bg-white sm:px-4 sm:text-sm">Buy Now</a>
       </div>
     </div>
+    <nav class="flex justify-center gap-6 border-t border-mint/15 px-4 py-2 text-xs font-bold uppercase tracking-wider text-white/75 md:hidden">
+      <a href="#story" class="hover:text-mint">Story</a>
+      <a href="#how" class="hover:text-mint">How to Buy</a>
+      <a href="#chart" class="hover:text-mint">Chart</a>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="relative mx-auto flex min-h-[92vh] max-w-6xl flex-col justify-end px-4 pb-10 pt-16 sm:px-6 sm:pb-16">
-      <div class="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2">
-        <img src="logo.png" alt="" class="floaty h-28 w-28 rounded-full opacity-0 sm:h-0 sm:w-0" />
-      </div>
+    <section class="relative mx-auto flex min-h-[88vh] max-w-6xl flex-col justify-end px-4 pb-8 pt-8 sm:px-6 sm:pb-16 sm:pt-16">
       <div class="glass relative overflow-hidden rounded-[2rem] p-6 sm:p-10 lg:p-12">
         <div class="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-mint/20 blur-3xl"></div>
         <div class="grid items-center gap-8 lg:grid-cols-[1.3fr_0.7fr]">
-          <div>
+          <div class="order-2 lg:order-1">
             <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-mint/40 bg-mint/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.22em] text-mint">
               <span class="h-2 w-2 rounded-full bg-mint shadow-glow"></span>
               Solana · $MEME
@@ -162,15 +169,15 @@
               Meme Industries: where Inu chaos meets crypto degen energy, turning every industry into a meme-powered moonshot.
             </p>
             <div class="mt-7 flex flex-col gap-3 sm:flex-row">
-              <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-shine inline-flex items-center justify-center rounded-full bg-mint px-7 py-3.5 text-base font-extrabold text-ink shadow-glow transition hover:bg-white">
+              <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="btn-shine inline-flex items-center justify-center rounded-full bg-mint px-7 py-3.5 text-base font-extrabold text-ink shadow-glow transition hover:bg-white">
                 Buy Now
               </a>
-              <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-mint/70 px-7 py-3.5 text-base font-extrabold text-mint transition hover:bg-mint hover:text-ink">
+              <a href="https://dexscreener.com/solana/GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full border border-mint/70 px-7 py-3.5 text-base font-extrabold text-mint transition hover:bg-mint hover:text-ink">
                 Chart
               </a>
             </div>
           </div>
-          <div class="flex justify-center lg:justify-end">
+          <div class="order-1 flex justify-center lg:order-2 lg:justify-end">
             <div class="relative">
               <div class="absolute inset-0 scale-110 rounded-full bg-mint/30 blur-2xl"></div>
               <img src="logo.png" alt="Meme Inudustries mark" class="floaty relative h-48 w-48 rounded-full ring-4 ring-mint shadow-glow sm:h-56 sm:w-56" />
@@ -181,7 +188,7 @@
         <div class="mt-8 flex flex-col gap-3 rounded-2xl border border-mint/25 bg-black/40 p-3 sm:flex-row sm:items-center sm:justify-between sm:p-4">
           <div class="min-w-0 px-2">
             <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-mint">Contract address</p>
-            <p id="ca-text" class="truncate font-mono text-sm text-white sm:text-base">TBA</p>
+            <p id="ca-text" class="truncate font-mono text-sm text-white sm:text-base">GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump</p>
           </div>
           <button id="copy-ca" type="button" class="shrink-0 rounded-full bg-mint px-5 py-2.5 text-sm font-extrabold text-ink transition hover:bg-white">
             Copy CA
@@ -259,7 +266,7 @@
             <h2 class="font-display mt-2 text-4xl text-white sm:text-5xl">How to Buy $MEME</h2>
             <p class="mt-3 max-w-xl text-white/75">Four steps from an empty wallet to Inu chaos in your bag.</p>
           </div>
-          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="btn-shine inline-flex items-center justify-center rounded-full bg-mint px-6 py-3 text-sm font-extrabold text-ink shadow-glow transition hover:bg-white">
+          <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="btn-shine inline-flex items-center justify-center rounded-full bg-mint px-6 py-3 text-sm font-extrabold text-ink shadow-glow transition hover:bg-white">
             Buy Now
           </a>
         </div>
@@ -277,14 +284,14 @@
           <li class="step-card rounded-3xl border border-mint/20 bg-black/40 p-5">
             <p class="font-display text-4xl text-mint">3</p>
             <h3 class="mt-2 text-lg font-extrabold">Copy the CA</h3>
-            <p class="mt-2 text-sm leading-relaxed text-white/75">Copy the $MEME contract and match it before you swap. The live address sits in the bar above and below.</p>
+            <p class="mt-2 text-sm leading-relaxed text-white/75">Copy the $MEME contract from the address bar and match it before you swap.</p>
             <button type="button" data-copy class="mt-4 rounded-full border border-mint px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-mint transition hover:bg-mint hover:text-ink">Copy CA</button>
           </li>
           <li class="step-card rounded-3xl border border-mint/20 bg-black/40 p-5">
             <p class="font-display text-4xl text-mint">4</p>
             <h3 class="mt-2 text-lg font-extrabold">Swap SOL for $MEME</h3>
             <p class="mt-2 text-sm leading-relaxed text-white/75">Hit Buy Now. SOL goes in, $MEME comes out. Then open the chart and watch the industry moon.</p>
-            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-full bg-mint px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-ink transition hover:bg-white">Buy Now</a>
+            <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-full bg-mint px-4 py-2 text-xs font-extrabold uppercase tracking-wider text-ink transition hover:bg-white">Buy Now</a>
           </li>
         </ol>
       </div>
@@ -299,13 +306,13 @@
         </div>
         <div class="flex flex-wrap gap-3">
           <button type="button" data-copy class="rounded-full border border-mint/70 px-5 py-3 text-sm font-extrabold text-mint transition hover:bg-mint hover:text-ink">Copy CA</button>
-          <a href="https://dexscreener.com/solana/TBA" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-mint px-5 py-3 text-sm font-extrabold text-ink shadow-glow transition hover:bg-white">Chart</a>
+          <a href="https://dexscreener.com/solana/GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded-full bg-mint px-5 py-3 text-sm font-extrabold text-ink shadow-glow transition hover:bg-white">Chart</a>
         </div>
       </div>
       <div class="overflow-hidden rounded-[1.6rem] border border-mint/30 bg-black/50 shadow-card">
         <iframe
           title="Dexscreener $MEME chart"
-          src="https://dexscreener.com/solana/TBA?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
+          src="https://dexscreener.com/solana/GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump?embed=1&loadChartSettings=0&trades=0&tabs=0&info=0&chartLeftToolbar=0&chartTheme=dark&theme=dark&chartStyle=0&chartType=usd&interval=15"
           class="h-[420px] w-full sm:h-[560px]"
           loading="lazy"
         ></iframe>
@@ -329,7 +336,7 @@
         <a href="https://x.com/MemeInudustries" target="_blank" rel="noopener noreferrer" aria-label="X" class="grid h-10 w-10 place-items-center overflow-hidden rounded-full bg-black ring-2 ring-white/15 transition hover:ring-mint">
           <img src="x.png" alt="" class="h-10 w-10 object-cover" />
         </a>
-        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=TBA" target="_blank" rel="noopener noreferrer" class="rounded-full bg-mint px-5 py-2.5 text-sm font-extrabold text-ink transition hover:bg-white">Buy Now</a>
+        <a href="https://swap.pump.fun/?input=So11111111111111111111111111111111111111112&output=GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump" target="_blank" rel="noopener noreferrer" class="rounded-full bg-mint px-5 py-2.5 text-sm font-extrabold text-ink transition hover:bg-white">Buy Now</a>
       </div>
     </div>
     <p class="px-4 pb-8 text-center text-xs text-white/45">$MEME is a meme. Markets move fast. This is not financial advice.</p>
@@ -338,7 +345,7 @@
   <div id="toast" class="pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-3 rounded-full bg-mint px-4 py-2 text-sm font-extrabold text-ink opacity-0" role="status" aria-live="polite">CA copied</div>
 
   <script>
-    const CA = "TBA";
+    const CA = "GESJNVvex9Z6vDyeKmCssuUoHFuaStV3ejytTMuepump";
     const toast = document.getElementById("toast");
     let toastTimer;
 
